@@ -13,6 +13,11 @@ status](https://www.r-pkg.org/badges/version/lua51)](https://CRAN.R-project.org/
 
 The goal of `lua51` is to …
 
+Connects R to Lua state machine using
+[`cpp11`](https://cpp11.r-lib.org/). Each Lua machine, the architecture
+supports multiple simultaneously, occupies a C++ mutable wrapper
+container.
+
 ### What is `cpp11`?
 
 See [C++11 Overview](https://isocpp.org/wiki/faq/cpp11) for full

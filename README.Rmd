@@ -22,6 +22,8 @@ knitr::opts_chunk$set(
 
 The goal of `lua51` is to ...
 
+Connects R to Lua state machine using [`cpp11`][cpp11.r-lib]. Each Lua machine, the architecture supports multiple simultaneously, occupies a C++ mutable wrapper container.
+
 ### What is `cpp11`?
 See [C++11 Overview][faq/cpp11] for full details.
 

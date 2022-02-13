@@ -3,3 +3,7 @@
 fun <- function() {
   invisible(.Call(`_lua51_fun`))
 }
+
+open_lua <- function() {
+  .Call(`_lua51_open_lua`)
+}
