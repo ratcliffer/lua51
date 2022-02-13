@@ -16,7 +16,7 @@ knitr::opts_chunk$set(
 ```
 
 Download and check the Lua 5.1.5 sources.
-```{r tar-gz, eval=TRUE}
+```{r tar-gz}
 tar.gz <- tempfile(fileext = ".tar.gz")
 download.file("https://www.lua.org/ftp/lua-5.1.5.tar.gz", tar.gz)
 sha.256 <- as.character(openssl::sha256(file(tar.gz, raw = TRUE)))
