@@ -1,0 +1,15 @@
+---
+title: "Technical Note 01"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Technical Note 01}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
