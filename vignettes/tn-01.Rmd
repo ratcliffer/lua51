@@ -13,3 +13,18 @@ knitr::opts_chunk$set(
   comment = "#>"
 )
 ```
+
+Download and check the Lua 5.1.5 sources.
+```{r tar-gz, eval=TRUE}
+tar.gz <- tempfile(fileext = ".tar.gz")
+download.file("https://www.lua.org/ftp/lua-5.1.5.tar.gz", tar.gz)
+sha.256 <- as.character(openssl::sha256(file(tar.gz, raw = TRUE)))
+stopifnot(sha.256 == "2640fc56a795f29d28ef15e13c34a47e223960b0240e8cb0a82d9b0738695333")
+untar(tar.gz, list = TRUE)
+```
+Select _only_ the C and C header sources.
+```{r file-ext-c-h}
+files <- untar(tar.gz, list = TRUE)
+files[xfun::file_ext(files) %in% c("c", "h")]
+```
+
