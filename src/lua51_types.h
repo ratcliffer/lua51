@@ -6,7 +6,7 @@ extern "C" {
 #include "lualib.h"
 #include "lauxlib.h"
 
-  int r_sand();
+  int r_rand();
   void r_srand(unsigned int seed);
   void r_exit(int status);
 
