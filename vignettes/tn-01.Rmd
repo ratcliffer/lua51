@@ -102,3 +102,9 @@ static int math_randomseed (lua_State *L) {
 }
 ```
 Lua integers are `ptrdiff_t` types, or `__int64` on 64-bit machines.
+
+## Getting lines
+
+Lua sources use the `getline` symbol for a debug macro. It clashes with [`getline`][getline.3] on macOS and Linux, having three arguments rather than two.
+
+[getline.3]:https://www.man7.org/linux/man-pages/man3/getline.3.html
