@@ -29,6 +29,7 @@
 #include "lundump.h"
 #include "lvm.h"
 #include "lzio.h"
+#include "lua51_types.h"
 
 
 
@@ -103,7 +104,7 @@ void luaD_throw (lua_State *L, int errcode) {
       lua_unlock(L);
       G(L)->panic(L);
     }
-    exit(EXIT_FAILURE);
+    r_exit(EXIT_FAILURE);
   }
 }
 
@@ -366,7 +367,7 @@ int luaD_poscall (lua_State *L, StkId firstResult) {
 ** The arguments are on the stack, right after the function.
 ** When returns, all the results are on the stack, starting at the original
 ** function position.
-*/ 
+*/
 void luaD_call (lua_State *L, StkId func, int nResults) {
   if (++L->nCcalls >= LUAI_MAXCCALLS) {
     if (L->nCcalls == LUAI_MAXCCALLS)
@@ -515,5 +516,3 @@ int luaD_protectedparser (lua_State *L, ZIO *z, const char *name) {
   luaZ_freebuffer(L, &p.buff);
   return status;
 }
-
-

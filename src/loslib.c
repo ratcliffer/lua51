@@ -18,6 +18,7 @@
 
 #include "lauxlib.h"
 #include "lualib.h"
+#include "lua51_types.h"
 
 
 static int os_pushresult (lua_State *L, int i, const char *filename) {
@@ -214,7 +215,8 @@ static int os_setlocale (lua_State *L) {
 
 
 static int os_exit (lua_State *L) {
-  exit(luaL_optint(L, 1, EXIT_SUCCESS));
+  r_exit(luaL_optint(L, 1, EXIT_SUCCESS));
+  return 0;
 }
 
 static const luaL_Reg syslib[] = {
@@ -240,4 +242,3 @@ LUALIB_API int luaopen_os (lua_State *L) {
   luaL_register(L, LUA_OSLIBNAME, syslib);
   return 1;
 }
-
