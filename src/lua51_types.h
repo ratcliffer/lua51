@@ -2,6 +2,8 @@
 extern "C" {
 #endif
 
+#define LUA_USE_MKSTEMP
+
 #include "lua.h"
 #include "lualib.h"
 #include "lauxlib.h"
