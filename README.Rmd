@@ -1,0 +1,49 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+
+# lua51
+
+<!-- badges: start -->
+[![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
+[![CRAN status](https://www.r-pkg.org/badges/version/lua51)](https://CRAN.R-project.org/package=lua51)
+<!-- badges: end -->
+
+The goal of `lua51` is to ...
+
+Connects R to Lua state machine using [`cpp11`][cpp11.r-lib]. Each Lua machine, the architecture supports multiple simultaneously, occupies a C++ mutable wrapper container.
+
+### What is `cpp11`?
+See [C++11 Overview][faq/cpp11] for full details.
+
+[faq/cpp11]:https://isocpp.org/wiki/faq/cpp11
+[cpp11.r-lib]:https://cpp11.r-lib.org/
+
+## Installation
+
+You can install the development version of `lua51` from
+[GitHub](https://github.com/) with:
+```r
+# install.packages("devtools")
+devtools::install_github("ratcliffer/lua51")
+```
+
+## Example
+
+This is a basic example which shows you how to solve a common problem:
+
+```{r example}
+library(lua51)
+## basic example code
+```

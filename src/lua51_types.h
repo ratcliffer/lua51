@@ -1,0 +1,20 @@
+#if __cplusplus
+extern "C" {
+#endif
+
+#define LUA_USE_MKSTEMP
+
+#include "lua.h"
+#include "lualib.h"
+#include "lauxlib.h"
+
+  int r_rand();
+  void r_srand(unsigned int seed);
+  void r_exit(int status);
+
+#if __cplusplus
+}
+
+void close_lua(lua_State *L);
+
+#endif
